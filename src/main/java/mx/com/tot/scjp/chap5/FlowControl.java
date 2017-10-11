@@ -51,7 +51,48 @@ public class FlowControl {
 
     }
 
+    /**
+     *  char, byte , short, int, or, as of Java 6, an enum, as of Java 7 an String
+     */
+    public static void switchTest() {
+        final String opcion3 = "3";
+        String opcion = "4";
+
+        switch (opcion) {
+            case "1":
+                System.out.println("vale 1");
+                break;
+            case opcion3:
+                System.out.println("vale 3");
+                break;
+            default:
+                System.out.println("vale " + opcion);
+        }
+    }
+
+    public static void switchTest2() {
+        System.out.println("***********************");
+        imprimeOpcion(2);
+        System.out.println("***********************");
+        imprimeOpcion(3);
+        System.out.println("***********************");
+        imprimeOpcion(7);
+    }
+
+    public static void imprimeOpcion(int opcion) {
+        switch (opcion) {
+            case 2:
+                System.out.println("case 2");
+            default:
+                System.out.println("default");
+            case 3:
+                System.out.println("case 3");
+            case 5:
+                System.out.println("case 5");
+        }
+    }
+
     public static void main(String[] args) {
-        FlowControl.witchPrints();
+        FlowControl.switchTest2();
     }
 }
